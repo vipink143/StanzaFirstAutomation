@@ -1,0 +1,16 @@
+
+
+{
+    "loginPageLocators":
+    {
+        "mobileLocator": "[class='login-mobile']",
+        "submitMobileOTP":"button[type='submit']",
+        "otpPlaceholder":".sc-VJcYb.gbPZFI >input",
+        "submitOtp":"[type='submit']"
+    },
+    
+    "ticketPageLocator":
+    {
+
+    }
+}
