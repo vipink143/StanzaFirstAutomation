@@ -1,0 +1,9 @@
+{
+    "homePageLocators":
+{
+     "verifyTextOnDashboard":".sc-drMfKT > .sc-bwCtUz",
+     "verifyTextOnDashboardd":"[class='sc-cqpYsc sc-drKuOJ blwEIG']",
+     "addTicketCreationButton":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']"
+}
+
+}

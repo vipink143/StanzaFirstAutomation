@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+// custom command for locator
+Cypress.Commands.add('validateLocator', (locator) => {
+    cy.get(locator).should('be.visible');
+  })
+
+  // custom command for click action
+ Cypress.Commands.add('locatorForClick', (locator) => {
+    cy.get(locator).should('be.visible').click();
+  })

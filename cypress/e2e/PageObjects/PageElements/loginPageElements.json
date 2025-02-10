@@ -5,8 +5,13 @@
     {
         "mobileLocator": "[class='login-mobile']",
         "submitMobileOTP":"button[type='submit']",
-        "otpPlaceholder":".sc-VJcYb.gbPZFI >input",
-        "submitOtp":"[type='submit']"
+        "otp":".sc-VJcYb.gbPZFI >input",
+        "otpPlaceholder":".sc-iQKALj.chvdRx >input",
+        "submitOtp":"[type='submit']",
+        "verifyTextOnDashboard":".sc-drMfKT > .sc-bwCtUz",
+     "verifyTextOnDashboardd":"[class='sc-cqpYsc sc-drKuOJ blwEIG']",
+     "addTicketCreationButton":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']"
+       
     },
     
     "ticketPageLocator":

@@ -21,14 +21,18 @@ class loginPage
     }
     submitOtpForLogin()
     {
+        
         let otp=['4','5','6','7']
         
-        cy.get(loginElementLocators.loginPageLocators.otpPlaceholder,{ timeout: 10000 }).debug()
+       // cy.get('[class="sc-VJcYb gbPZFI"] >input')
+        cy.get(loginElementLocators.loginPageLocators.otpPlaceholder)
         .each(($el,index,$list)=>{
             cy.wrap($el).type(otp[index])
             .should('be.visible');
 
         })
+
+        
         cy.get(loginElementLocators.loginPageLocators.submitOtp)
         .should('not.be.disabled')
         .should('not.be.hidden')
@@ -41,7 +45,11 @@ class loginPage
                 // button is disabled
             }
         })
-
+        
     }
+    
+    
+    
+    
 
 } export default loginPage
