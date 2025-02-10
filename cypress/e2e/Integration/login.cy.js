@@ -1,31 +1,47 @@
 /// <reference types= "cypress" />
-import loginPage from "../PageObjects/PageActions/loginPageAction";
+import loginPage from "../PageObjects/PageActions/LoginPage";
 
-describe("Automate stanza web app",()=>{
+describe("Login user with valid and invalid credentials",()=>{
 
    
 
-    beforeEach("test",()=>{
+    beforeEach(()=>{
 
-        cy.session("saved user session",()=>{
+        
 
-            cy.visit("https://nucleus.stanzaliving.com/login");
+        cy.visit(Cypress.env('prodUrl'));
         cy.url().should('contain','nucleus.stanzaliving.com');
-        cy.fixture('StanzaFile').then((loginData)=>{
+        
+    
 
-            let login=new loginPage();
-            login.submitMobileNumber(loginData.mobile)
-            login.submitOtpForLogin();
-            
-        })
-        })
     })
 
-   
+    it("Login with valid user",()=>{
 
-    it("Login to stanza",()=>{
+        cy.fixture('StanzaFile').then((loginData)=>{
 
-        cy.url().should('have.value','https://nucleus.stanzaliving.com/cx/support/ticketResolution')
+            
+            loginPage.submitMobileNumber(loginData.validUser.mobile)
+            loginPage.submitOtpForLogin();
+            
+        })
+        
+
+        cy.url().should('contain','https://nucleus.stanzaliving.com/cx/support/ticketResolution')
+        
+    })
+
+    it("Login with invalid user",()=>{
+
+        cy.fixture('StanzaFile').then((loginData)=>{
+
+            
+            loginPage.submitMobileNumber(loginData.invalidUser.mobile)
+            loginPage.errormsg()
+            
+            
+        })
+        
         
     })
 })

@@ -1,7 +1,17 @@
 {
+    "validUser":
+    {
+        "mobile":2468100001
+
+    },
+    "invalidUser":
+    {
+        "mobile":2468100002
+
+    }
 
    
-"mobile":2468100001
+
 
 
 }

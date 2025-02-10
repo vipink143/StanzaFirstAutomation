@@ -47,9 +47,14 @@ class loginPage
         })
         
     }
+
+    errormsg()
+    {
+        cy.get(loginElementLocators.loginPageLocators.errorForInvalidUser).should('contain','No user exists with this number')
+    }
     
     
     
     
 
-} export default loginPage
+} export default new loginPage

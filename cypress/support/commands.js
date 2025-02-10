@@ -24,6 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import loginPage from "../e2e/PageObjects/PageActions/LoginPage";
+
+
 // custom command for locator
 Cypress.Commands.add('validateLocator', (locator) => {
     cy.get(locator).should('be.visible');
@@ -32,4 +35,13 @@ Cypress.Commands.add('validateLocator', (locator) => {
   // custom command for click action
  Cypress.Commands.add('locatorForClick', (locator) => {
     cy.get(locator).should('be.visible').click();
+  })
+
+  Cypress.Commands.add('login',()=>{
+    cy.fixture('StanzaFile').then((loginData)=>{
+      loginPage.submitMobileNumber(loginData.mobile)
+      loginPage.submitOtpForLogin();
+      
+  })
+
   })

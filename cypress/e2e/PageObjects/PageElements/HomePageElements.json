@@ -1,9 +1,12 @@
 {
-    "homePageLocators":
+    "homePageElementLocators":
 {
-     "verifyTextOnDashboard":".sc-drMfKT > .sc-bwCtUz",
-     "verifyTextOnDashboardd":"[class='sc-cqpYsc sc-drKuOJ blwEIG']",
-     "addTicketCreationButton":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']"
+    "searchLocator":".search-input",
+    "dropDownLocator":"[class='sc-gojNiO ekoTII select-button ']",
+    "moreFilterLocator":"[class='sc-qrIAp sc-iqzUVk sc-ebFjAB gFbQEo showFilterButtonBorder']>span",
+    "addNewTicketLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
+    "rowItemLocator":"table tbody tr",
+    "columnItemLocator":"table tbody tr td"
 }
 
 }
