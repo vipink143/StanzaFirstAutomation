@@ -19,16 +19,15 @@ class homePage
     {
         this.searchInput.type("vipin test");
 
-        this.findRowNumberInput.eq(0).each(($row,index,rows)=>{
-            cy.wrap($row).within(()=>{
-                this.findColumnNumberInput.each(($residentName)=>{
-                    cy.log('Resident Name :',$residentName.text().trim())
-
-                })
-            
-
-                })
-            })
+        cy.get('table tbody tr').each(($row) => {
+            cy.wrap($row).within(() => {
+                cy.get('td').each(($td) => {
+                    if ($td.text().includes('Vipin Test')) {
+                        cy.log('Found Vipin Test in:', $row.text()); // Log the whole row
+                    }
+                });
+            });
+        });
         
     
 
