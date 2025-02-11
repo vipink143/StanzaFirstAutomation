@@ -7,7 +7,7 @@ describe("Home page actions",()=>{
 
         cy.visit(Cypress.env('prodUrl'))
 
-        cy.fixture('StanzaFile').then((users)=>{
+        cy.fixture('users.json').then((users)=>{
             LoginPage.submitMobileNumber(users.validUser.mobile)
             LoginPage.submitOtpForLogin()
 

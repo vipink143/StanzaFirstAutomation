@@ -6,7 +6,11 @@
     "moreFilterLocator":"[class='sc-qrIAp sc-iqzUVk sc-ebFjAB gFbQEo showFilterButtonBorder']>span",
     "addNewTicketLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
     "rowItemLocator":"table tbody tr",
-    "columnItemLocator":"table tbody tr td"
+    "columnItemLocator":"table tbody tr td",
+    "specificElementLocator":":nth-child(1) > .ticket-id"
+
+
+    
 }
 
 }

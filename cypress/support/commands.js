@@ -38,7 +38,7 @@ Cypress.Commands.add('validateLocator', (locator) => {
   })
 
   Cypress.Commands.add('login',()=>{
-    cy.fixture('StanzaFile').then((loginData)=>{
+    cy.fixture('users.json').then((loginData)=>{
       loginPage.submitMobileNumber(loginData.mobile)
       loginPage.submitOtpForLogin();
       

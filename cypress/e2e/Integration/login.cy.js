@@ -18,7 +18,7 @@ describe("Login user with valid and invalid credentials",()=>{
 
     it("Login with valid user",()=>{
 
-        cy.fixture('StanzaFile').then((loginData)=>{
+        cy.fixture('users.json').then((loginData)=>{
 
             
             loginPage.submitMobileNumber(loginData.validUser.mobile)
@@ -33,7 +33,7 @@ describe("Login user with valid and invalid credentials",()=>{
 
     it("Login with invalid user",()=>{
 
-        cy.fixture('StanzaFile').then((loginData)=>{
+        cy.fixture('users.json').then((loginData)=>{
 
             
             loginPage.submitMobileNumber(loginData.invalidUser.mobile)
