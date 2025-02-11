@@ -15,9 +15,15 @@ describe("Home page actions",()=>{
     })
 
 
-    it("Home page details",()=>{
-        HomePage.searchCriteria();
+    it("should search the data",()=>{
+        HomePage.searchCriteria(); 
+    })
 
-     
+    it("should add the new tickets",()=>{
+        HomePage.createNewTickets();
+    })
+
+    it.only("should action through more filters",()=>{
+        HomePage.moreFilerActions();
     })
 })

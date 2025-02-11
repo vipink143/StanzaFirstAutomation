@@ -5,13 +5,14 @@ class homePage
 {
 
     get searchInput() { return cy.get(homePageLocators.homePageElementLocators.searchLocator)}
-    get statusDropdownInput() { return cy.get(homePageLocators.homePageElementLocators.dropDownLocator)}
+    get statusDropdownInput() { return cy.get(homePageLocators.homePageElementLocators.statusDropDownLocator)}
     get categoryDropdownInput() { return cy.get(homePageLocators.homePageElementLocators.dropDownLocator)}
     get moreFilterInput() { return cy.get(homePageLocators.homePageElementLocators.moreFilterLocator)}
     get addingNewTicketInput() { return cy.get(homePageLocators.homePageElementLocators.addNewTicketLocator)}
     get findRowNumberInput() { return cy.get(homePageLocators.homePageElementLocators.rowItemLocator)}
     get findColumnNumberInput() { return cy.get(homePageLocators.homePageElementLocators.columnItemLocator)}
     get findSpecificElementInput() { return cy.get(homePageLocators.homePageElementLocators.specificElementLocator)}
+    get newTicketTextVerification() { return cy.get(homePageLocators.homePageElementLocators.addNewTicketTextVerifyLocator)}
 
 
 
@@ -26,27 +27,25 @@ class homePage
                 cy.log($el.text())
             }
         })
-
-
-
-/*
-
-        cy.get('table tbody tr').each(($row) => {
-            cy.wrap($row).within(() => {
-                cy.get('td').each(($td) => {
-                    if ($td.text().includes('Vipin Test')) {
-                        cy.log('Found Vipin Test in:', $row.text()); // Log the whole row
-                    }
-                });
-            });
-        });
-        
-        */
-    
-
-
     }
 
+    getStatusOfTickets()
+    {
+        this.statusDropdownInput.contains('Status').click()
+        return this
+    }
+
+    createNewTickets()
+    {
+        this.addingNewTicketInput.click();
+        this.newTicketTextVerification.should('contain',"Add New Tickets")
+    }
+
+
+    moreFilerActions()
+    {
+        this.moreFilterInput.click({force: true})
+    }
     
    
 } export default new homePage

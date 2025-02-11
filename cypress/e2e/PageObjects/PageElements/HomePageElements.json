@@ -2,9 +2,10 @@
     "homePageElementLocators":
 {
     "searchLocator":".search-input",
-    "dropDownLocator":"[class='sc-gojNiO ekoTII select-button ']",
-    "moreFilterLocator":"[class='sc-qrIAp sc-iqzUVk sc-ebFjAB gFbQEo showFilterButtonBorder']>span",
+    "statusDropDownLocator":"[id='42054543b2-468ea-25-265c23bb-4df8aaf']",
+    "moreFilterLocator":".sc-bsbRJL > .title",
     "addNewTicketLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
+    "addNewTicketTextVerifyLocator":".sc-elNKlv > .sc-bwCtUz",
     "rowItemLocator":"table tbody tr",
     "columnItemLocator":"table tbody tr td",
     "specificElementLocator":":nth-child(1) > .ticket-id"
