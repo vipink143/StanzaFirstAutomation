@@ -23,7 +23,14 @@ describe("Home page actions",()=>{
         HomePage.createNewTickets();
     })
 
-    it.only("should action through more filters",()=>{
+    it("should action through more filters",()=>{
         HomePage.moreFilerActions();
     })
+
+    it.only("should handle the status dropdown",()=>{
+        HomePage.getStatusOfTickets();
+    })
+
+
+
 })

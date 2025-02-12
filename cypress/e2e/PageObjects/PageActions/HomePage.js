@@ -29,12 +29,6 @@ class homePage
         })
     }
 
-    getStatusOfTickets()
-    {
-        this.statusDropdownInput.contains('Status').click()
-        return this
-    }
-
     createNewTickets()
     {
         this.addingNewTicketInput.click();
@@ -45,6 +39,34 @@ class homePage
     moreFilerActions()
     {
         this.moreFilterInput.click({force: true})
+    }
+
+    getStatusOfTickets()
+    {
+        // this.statusDropdownInput.contains('Status').click({force: true})
+        // return this
+    //    cy.contains('Status').click({force: true})
+    //    cy.get(".select__value-container").type("open").check()
+
+    const ExpectedDropdown=['Marketing','Customer Experience']
+        // Code not Working
+    cy.get("[class='select department__control css-yxr2ga-control']>div").eq(0).click()
+        cy.get(".department__menu-list")
+        //.find('div')
+        .each(($el,index)=>{
+            if($el.text()==='Marketing')
+            {
+                cy.wrap($el).click()
+          return false
+            }
+
+           
+        })
+
+   
+
+       
+       
     }
     
    

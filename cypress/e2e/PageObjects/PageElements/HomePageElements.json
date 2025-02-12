@@ -2,7 +2,7 @@
     "homePageElementLocators":
 {
     "searchLocator":".search-input",
-    "statusDropDownLocator":"[id='42054543b2-468ea-25-265c23bb-4df8aaf']",
+    "statusDropDownLocator":"button[id='42054543b2-468ea-25-265c23bb-4df8aaf']",
     "moreFilterLocator":".sc-bsbRJL > .title",
     "addNewTicketLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
     "addNewTicketTextVerifyLocator":".sc-elNKlv > .sc-bwCtUz",
