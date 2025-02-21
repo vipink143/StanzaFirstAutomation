@@ -5,8 +5,8 @@
   "scripts": {
     "results-junit:delete": "rm -rf cypress/results/junit/* || true",
     "report:pre": "npm run results-junit:delete",
-    "report:post": "npm run results-junit:combine",
-   
+    
+    "results-junit:combine": "npx jrm cypress/results/junit/combined-report.xml \"cypress/results/junit/*.xml\"",
     "test:report": "npm run report:pre && npx cypress run && npm run report:post",
     "test:all": "npx cypress run"
   },
