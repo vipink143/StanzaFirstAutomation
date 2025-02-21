@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "results-junit:delete": "rm -rf cypress/results/junit/* || true",
+    "results-junit:combine": "jrm cypress/results/junit/combined-report.xml \"cypress/results/junit/*.xml\"",
     "report:pre": "npm run results-junit:delete",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "report:post": "npm run results-junit:combine",
   },
   "author": "vipin",
   "license": "ISC",
