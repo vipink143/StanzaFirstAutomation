@@ -86,7 +86,7 @@ pipeline {
            }
        }
        
-       This deletes any older xml results files present in the directory
+     //  This deletes any older xml results files present in the directory
        stage('Stage 3 - Clearing old reports') {
            steps {
                sh "npm run report:pre"
@@ -115,7 +115,7 @@ pipeline {
             }
         }
         
-        Mocha JUnit Reporter produces separate XML for each spec result, so we merge the test results into one XML file 
+       // Mocha JUnit Reporter produces separate XML for each spec result, so we merge the test results into one XML file 
        stage('Stage 5 - Merging JUnit reports') {
            steps {
                sh "npm run report:post"
