@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const { merge } = require('mochawesome-merge')
 
 module.exports = defineConfig({
   
@@ -7,7 +8,7 @@ module.exports = defineConfig({
     pageLoadTimeout:60000,
     reporter: 'cypress-mochawesome-reporter',
     reporterOptions: {
-      reportDir: 'cypress/reports', // Directory where reports will be saved
+      reportDir: 'cypress/results/cypress-mochawesome-reporter', // Directory where reports will be saved
       overwrite: false,
       html: true,
       json: true,
