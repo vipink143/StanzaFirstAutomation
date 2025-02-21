@@ -6,7 +6,7 @@ pipeline {
    
    tools {
        //Use Node name configured in global tools configuration for Node Jenkins Plugin
-       nodejs "Node 23.7.0"
+       nodejs "NodeJS 23.7.0"
    }
    
 
