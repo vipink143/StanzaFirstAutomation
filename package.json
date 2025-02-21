@@ -5,7 +5,7 @@
   "scripts": {
     "results-junit:delete": "rm -rf cypress/results/junit/* || true",
     "report:pre": "npm run results-junit:delete",
-    "report:post": "npm run results-junit:combine",
+    "report:post": "npm run results-junit:combine"
   },
   "author": "vipin",
   "license": "ISC",
