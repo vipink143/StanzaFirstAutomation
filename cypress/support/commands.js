@@ -45,3 +45,48 @@ Cypress.Commands.add('validateLocator', (locator) => {
   })
 
   })
+
+
+  Cypress.Commands.add("applyFilters", (filters) => {
+    if (filters.status) {
+        cy.get('[data-test="status-filter"]').select(filters.status); // Example selector
+    }
+    
+    if (filters.location) {
+        cy.get('[data-test="location-filter"]').select(filters.location);
+    }
+    
+    if (filters.priority) {
+        cy.get('[data-test="priority-filter"]').select(filters.priority);
+    }
+
+    if (filters.tags) {
+        filters.tags.forEach(tag => {
+            cy.get('[data-test="tag-filter"]').type(tag).type('{enter}');
+        });
+    }
+
+    if (filters.assignedUser) {
+        cy.get('[data-test="assigned-user-filter"]').type(filters.assignedUser);
+    }
+
+    if (filters.dateRange) {
+        cy.get('[data-test="start-date"]').type(filters.dateRange.start);
+        cy.get('[data-test="end-date"]').type(filters.dateRange.end);
+    }
+
+    if (filters.ticketType) {
+        cy.get('[data-test="ticket-type-filter"]').select(filters.ticketType);
+    }
+
+    if (filters.sortBy) {
+        cy.get('[data-test="sort-by-filter"]').select(filters.sortBy);
+    }
+
+    if (filters.ticketSource) {
+        cy.get('[data-test="ticket-source-filter"]').select(filters.ticketSource);
+    }
+
+    // Click the apply button after setting filters
+    cy.get('[data-test="apply-filters"]').click();
+});

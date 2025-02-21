@@ -8,7 +8,9 @@
     "addNewTicketTextVerifyLocator":".sc-elNKlv > .sc-bwCtUz",
     "rowItemLocator":"table tbody tr",
     "columnItemLocator":"table tbody tr td",
-    "specificElementLocator":":nth-child(1) > .ticket-id"
+    "specificElementLocator":":nth-child(1) > .ticket-id",
+    "headerDropdownLocator":"[class='select department__control css-yxr2ga-control']>div",
+    "headerDropdownItemsLocator":".department__menu-list"
 
 
     
