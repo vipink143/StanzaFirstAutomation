@@ -39,7 +39,7 @@ Cypress.Commands.add('validateLocator', (locator) => {
 
   Cypress.Commands.add('login',()=>{
     cy.fixture('users.json').then((loginData)=>{
-      loginPage.submitMobileNumber(loginData.mobile)
+      loginPage.submitMobileNumber(loginData.validUser.mobile)
       loginPage.submitOtpForLogin();
       
   })

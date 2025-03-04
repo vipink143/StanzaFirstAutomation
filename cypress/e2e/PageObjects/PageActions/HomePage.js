@@ -31,7 +31,7 @@ class homePage
         })
     }
 
-    createNewTickets()
+    createNewTicketsCTA()
     {
         this.addingNewTicketInput.click();
         this.newTicketTextVerificationInput.should('contain',"Add New Tickets")

@@ -1,0 +1,18 @@
+
+
+
+{
+
+    "ticketCreationElementLocators":
+    {
+        "DropdownInputLocator":"[class='field-label']",
+        "DropdownValueLocator":".select__value-container",
+        "DescriptionValueLocator":"[class='input-field textarea  false null']",
+        "ImageUploadLocator":"[id='file']",
+        "SelectCheckBoxLocator":"[class='checkbox-contianer'] >input",
+        "TicketSubmitButtonLocator":"[class='sc-gipzik jBawEl disabled']",
+        "CloseButtonLocator":"[class='sc-chPdSV sc-kpOJdX eINKxn action-btn close']"
+    }
+
+
+}
