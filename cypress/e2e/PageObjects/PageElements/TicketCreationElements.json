@@ -10,7 +10,7 @@
         "DescriptionValueLocator":"[class='input-field textarea  false null']",
         "ImageUploadLocator":"[id='file']",
         "SelectCheckBoxLocator":"[class='checkbox-contianer'] >input",
-        "TicketSubmitButtonLocator":"[class='sc-gipzik jBawEl disabled']",
+        "TicketSubmitButtonLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
         "CloseButtonLocator":"[class='sc-chPdSV sc-kpOJdX eINKxn action-btn close']"
     }
 
