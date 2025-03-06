@@ -47,6 +47,7 @@ class TicketCreationPage
     enterComplaintGroupName()
     {
         this.complaintGroupDropdownInput.contains('Complaint Group').click();
+        cy.wait(2000)
         this.complaintGroupDropdownInputValue.type("App Issues").type('{Enter}')
 
     }

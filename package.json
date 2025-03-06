@@ -8,14 +8,12 @@
     "report:pre": "npm run results-junit:delete",
     "report:post": "npm run results-junit:combine",
     "stanza-test": "cypress/e2e/Integration/login.cy.js,cypress/e2e/Integration/homeTest.cy.js"
-    
-   
   },
   "author": "vipin",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^13.17.0",
+    "cypress": "^14.1.0",
     "cypress-mochawesome-reporter": "^3.8.2",
     "jrm": "^1.0.1",
     "mochawesome-merge": "^4.4.1"

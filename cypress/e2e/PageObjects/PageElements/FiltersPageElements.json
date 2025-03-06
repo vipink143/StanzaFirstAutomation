@@ -1,0 +1,10 @@
+
+{
+    "filtersPageElementLocators":
+    {
+        "closeButtonLocator":"[class='sc-chPdSV sc-kpOJdX eINKxn action-btn']",
+        "resetButtonLocator":"[class='sc-csuQGl ktFCeh secondary-1 action-btn']",
+        "applyFiltersButtonLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
+        "filtersTagLocator":"[class='sc-cmthru sc-cLQEGU hmElCd tabs-container'] >span"
+    }
+}
