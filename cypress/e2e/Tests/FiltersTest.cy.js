@@ -7,7 +7,7 @@ describe("Test the different filters and buttons",()=>{
 
         cy.visit(Cypress.env("prodUrl"));
         cy.login();
-        HomePage.moreFilerActions()
+        HomePage.moreFilterActions()
 
 
     })
@@ -39,7 +39,7 @@ describe("Test the different filters and buttons",()=>{
 
 
         FiltersPage.locationFilterApplicable();
-        HomePage.moreFilerActions()
+        HomePage.moreFilterActions()
         FiltersPage.sortByFilterApplicable();
     })
 

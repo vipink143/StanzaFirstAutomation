@@ -38,7 +38,7 @@ class homePage
     }
 
 
-    moreFilerActions()
+    moreFilterActions()
     {
         this.moreFilterInput.click({force: true})
     }
@@ -75,7 +75,22 @@ class homePage
             
         })  
         })
+
+        
     
+    }
+
+    handleDepartmentDropdown()
+    {
+        let userRoles=['SALES','Operations','Marketing','Customer Experience']
+        cy.get('.department__indicators > .select').click()
+        cy.get('.department__menu-list').each(($el)=>{
+           // let getText=$el.text().trim();
+            if(userRoles==='Marketing')
+            {
+                cy.wrap($el).click();
+            }
+        })
     }
 
 

@@ -24,12 +24,17 @@ describe("Home page actions",()=>{
     })
 
     it("should action through more filters",()=>{
-        HomePage.moreFilerActions();
+        HomePage.moreFilterActions();
     })
 
-    it.skip("should handle the status dropdown",()=>{
+    it("should handle the status dropdown",()=>{
         HomePage.getStatusOfTickets();
     })
+    it.skip("Should change the dropdown value",()=>{
+        HomePage.handleDepartmentDropdown()
+
+    })
+    
 
 
 
