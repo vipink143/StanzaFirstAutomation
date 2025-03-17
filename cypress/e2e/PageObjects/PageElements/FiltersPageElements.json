@@ -8,6 +8,7 @@
         "filtersTagLocator":".dfmApD >span",
         "locationDropDownLocator":".jpmeCn",
         "locationPlaceholderLocator":".select__value-container",
-        "locationListDropdownLocator":".select__menu-list"
+        "locationListDropdownLocator":".select__menu-list",
+        "locationApplyFilterBtnLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']"
     }
 }
