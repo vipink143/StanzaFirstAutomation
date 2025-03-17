@@ -42,16 +42,63 @@ class FiltersPage
 
     statusFilterApplicable()
     {
-        const status=['Location','Complaint Group','Priority','Sort By','Status']
+        const filtersToApply=['Location','Complaint Group','Priority','Sort By','Status']
         
        
-        this.filtersTagInput.each(($el,index,list)=>{
-            if($el=='Location')
+        this.filtersTagInput.contains('Location').each(($el,index,list)=>{
+            let filterText=$el.text().trim();
+            if(filtersToApply.includes(filterText))
             {
-                cy.wrap($el).click()
+                cy.wrap($el).click({force:true})
             }
+            if(filterText==='Location')
+            {
+                cy.get(".jpmeCn").contains("City")
+                .click()
+                 cy.get('.select__value-container').type('Bombay').wait(2000)
 
+                 cy.get('.select__menu-list').find('div').then((cityElements) => {
+                    cityElements.toArray().forEach((eleCity) => {
+                      if (eleCity.innerText.trim() === 'Bombay') {
+                        cy.wrap(eleCity).click(); // Click on the matching city
+                      }
+                    });
+                  });
+
+                  cy.get(".jpmeCn").contains("Micromarket")
+                  .click({force:true})
+                  cy.get('.select__value-container').type('Vile Parla').wait(2000)
+                  cy.get('.select__menu-list').find('div').then((micromarketElements)=>{
+                    micromarketElements.toArray().forEach((eleMicromarket)=>{
+                        if(eleMicromarket.innerText.trim() === 'Vile Parla')
+                        {
+                            cy.wrap(eleMicromarket).click()   // Click on the matching micromarket
+                        }
+                    })
+
+                  })
+                
+                  cy.get(".jpmeCn").contains("Micromarket")
+                  .click({force:true})
+                  cy.get('.select__value-container').type('Bombay House').wait(2000)
+                  cy.get('.select__menu-list').find('div').then((residenceElements)=>{
+                    residenceElements.toArray().forEach((eleResidence)=>{
+                        if(eleResidence.innerText.trim()==='Bombay House')
+                        {
+                            cy.wrap(eleResidence).click();       // Click on the matching residence
+                        }
+                        
+                    })
+                  })
+                  
+                        
+
+               
+            }
         })
+
+       
     }
 
 } export default new FiltersPage
+
