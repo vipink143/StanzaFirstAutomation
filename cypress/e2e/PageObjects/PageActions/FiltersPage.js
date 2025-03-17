@@ -60,7 +60,7 @@ class FiltersPage
             {
                 this.locationDropdownInput.contains("City")
                 .click()
-                 this.locationPlaceholderInput.type('Bombay').wait(1000)
+                 this.locationPlaceholderInput.type('Bombay').wait(2000)
                  this.locationListDropdownInput.find('div').then((cityElements) => {
                     cityElements.toArray().forEach((eleCity) => {
                       if (eleCity.innerText.trim() === 'Bombay') {
@@ -71,7 +71,7 @@ class FiltersPage
 
                   this.locationDropdownInput.contains("Micromarket")
                   .click({force:true})
-                  this.locationPlaceholderInput.type('Vile Parla').wait(1000)
+                  this.locationPlaceholderInput.type('Vile Parla').wait(2000)
                   this.locationListDropdownInput.find('div').then((micromarketElements)=>{
                     micromarketElements.toArray().forEach((eleMicromarket)=>{
                         if(eleMicromarket.innerText.trim() === 'Vile Parla')
@@ -84,7 +84,7 @@ class FiltersPage
                 
                   this.locationDropdownInput.contains("Residence")
                   .click({force:true})
-                  this.locationPlaceholderInput.type('Bombay House').wait(1000)
+                  this.locationPlaceholderInput.type('Bombay House').wait(2000)
                   this.locationListDropdownInput.find('div').then((residenceElements)=>{
                     residenceElements.toArray().forEach((eleResidence)=>{
                         if(eleResidence.innerText.trim() === 'Bombay House')

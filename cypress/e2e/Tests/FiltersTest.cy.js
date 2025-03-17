@@ -35,7 +35,7 @@ describe("Test the different filters and buttons",()=>{
         FiltersPage.sortByFilterApplicable();
     })
 
-    it.only("Should applied the location and sort by filters and get the data",()=>{
+    it("Should applied the location and sort by filters and get the data",()=>{
 
 
         FiltersPage.locationFilterApplicable();
