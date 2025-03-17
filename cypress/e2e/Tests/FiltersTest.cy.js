@@ -24,9 +24,24 @@ describe("Test the different filters and buttons",()=>{
         
     })
 
-    it.only("Should applied the filters and get the data",()=>{
+    it("Should applied the location filters and get the data",()=>{
 
-        FiltersPage.statusFilterApplicable();
+        FiltersPage.locationFilterApplicable();
         
     })
+
+    it("Should applied the sort by filter and get the data",()=>{
+
+        FiltersPage.sortByFilterApplicable();
+    })
+
+    it.only("Should applied the location and sort by filters and get the data",()=>{
+
+
+        FiltersPage.locationFilterApplicable();
+        HomePage.moreFilerActions()
+        FiltersPage.sortByFilterApplicable();
+    })
+
+
 })

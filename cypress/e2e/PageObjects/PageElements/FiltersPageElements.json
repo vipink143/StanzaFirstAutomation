@@ -9,6 +9,7 @@
         "locationDropDownLocator":".jpmeCn",
         "locationPlaceholderLocator":".select__value-container",
         "locationListDropdownLocator":".select__menu-list",
-        "locationApplyFilterBtnLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']"
+        "locationApplyFilterBtnLocator":"[class='sc-chPdSV sc-jKJlTe jpJRqz action-btn']",
+        "sortByFilterLocator":".sc-gpHHfC>div"
     }
 }
