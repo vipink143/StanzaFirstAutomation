@@ -19,7 +19,7 @@ describe("Home page actions",()=>{
         HomePage.searchCriteria(); 
     })
 
-    it("should add the new tickets",()=>{
+    it.only("should add the new tickets",()=>{
         HomePage.createNewTicketsCTA();
     })
 
@@ -35,7 +35,9 @@ describe("Home page actions",()=>{
 
     })
     
-
+    afterEach(()=>{
+        cy.get("[class='logout-link']").should('be.visible').click()
+    })
 
 
 })

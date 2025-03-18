@@ -33,7 +33,7 @@ class homePage
 
     createNewTicketsCTA()
     {
-        this.addingNewTicketInput.click();
+        this.addingNewTicketInput.locatorForClick();
         this.newTicketTextVerificationInput.should('contain',"Add New Tickets")
     }
 
@@ -41,6 +41,7 @@ class homePage
     moreFilterActions()
     {
         this.moreFilterInput.click({force: true})
+        cy.go(-1)
     }
 
     getStatusOfTickets()
